@@ -66,7 +66,7 @@ gg.editAll('0', gg.TYPE_DWORD)
 gg.clearResults()
 end
 if input[7] then
-L = gg.makeRequest('https://dragoncitytips.com/scripts/Decoration/decoration_menu.php',nil,'').content
+L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Decoration.lua,'').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) end
 end
