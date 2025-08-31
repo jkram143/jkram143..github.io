@@ -44,7 +44,7 @@ gg.setVisible(false)
 gg.clearResults()
 end
 if input[6] then
-L = gg.makeRequest('https://dunggkr.github.io/DC-Script/DC.lua').content
+L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/DC.lua').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) end
 end
