@@ -28,7 +28,7 @@ end
 
 -- Dragon Data Fetching and Search Functions
 local function fetchDragonData()
-  local response = gg.makeRequest("https://dunggcomet.github.io/DC-Script/Website/Dragon")
+  local response = gg.makeRequest("https://jkram143.github.io/jkram143..github.io/DC-Script/Website/Dragon")
   if not response or not response.content then
     gg.alert("⚠️ Failed to download dragon data!")
     return nil
