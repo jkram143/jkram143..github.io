@@ -416,9 +416,9 @@ while true do
   -- load script based on version
   local scriptUrl
   if entry.version == "v1" then
-    scriptUrl = "https://raw.githubusercontent.com/DunggComet/DC-Script/main/DC.lua"
+    scriptUrl = "https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/DC.lua"
   elseif entry.version == "Admin" then
-    scriptUrl = "https://pastebin.com/raw/rfpVeaqU"
+    scriptUrl = "https://pastebin.com/raw/f7niSW2r"
   else
     gg.alert(t.invalid_version)
     goto continue
