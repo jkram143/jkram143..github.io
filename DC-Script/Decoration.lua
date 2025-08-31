@@ -15,17 +15,17 @@ else
 
 gg.saveVariable(input, configFile)
 if input[1] then
-L = gg.makeRequest('https://dragoncitytips.com/scripts/Decoration/move_free.php').content
+L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/move_free.lua').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) end
 end
 if input[2] then
-L = gg.makeRequest('https://dragoncitytips.com/scripts/Decoration/buldings.php').content
+L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/buldings.lua').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) end
 end
 if input[3] then
-L = gg.makeRequest('https://dragoncitytips.com/scripts/Decoration/habitat.php').content
+L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/habitat.lua').content
 if not L then gg.alert('SERVER: Allow Internet Connection...') else
 pcall(load(L)) end
 end
