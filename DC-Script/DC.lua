@@ -32,6 +32,7 @@ gg.setVisible(false)
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
 local MD5 = gg.makeRequest('').content
+gg.alert(os.date('╟═══════════════════════╢\n  🚀🌎Written by Duc An Nguyen🌎🚀\n  Version Tool: Dragon City\n  Language Script : English\n  Server Script : online\n  Script Update : 14/12/2021 5:44 AM\n  Today : %c\n  Keylog : Birth day Duc An Nguyen\n  Contact :https://www.facebook.com/jkram143\n  Phone: 09564786134\n  ╟═══════════════════════╢'))
 function Main()
     menu = gg.choice({
         '⚔️ Battle Arena Feature', --1
