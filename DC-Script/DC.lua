@@ -41,8 +41,8 @@ function Main()
         '🔑 Dragon Rescue Feature', --5
         '➡️ Test & Train Dragon/Skill Feature', --6
         '🏁 Event Race', --7
-        ' 🏝️ decoration', --8
-        ' 🏝️ Expand all Unlocked 🔓', --9
+        ' 🏝️ Unlock islands  🔓 ', --8
+        ' 🏝️ move Habitat ', --9
         '⚡ Speedhack Feature',
         '🗡️ Quest Feature ( Rankup )',
         '💬 Join Our Discord Community'
@@ -116,7 +116,7 @@ function DragonCityHack10()
 end
 
 function DragonCityHack8()
-    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Decoration.lua').content
+    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Unlock.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
@@ -134,7 +134,7 @@ function DragonCityHack11()
 end
 
 function DragonCityHack12()
-L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Expand.lua').content
+L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Habitat.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
