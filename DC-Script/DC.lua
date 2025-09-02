@@ -47,7 +47,7 @@ function Main()
         '⚡ Speedhack Feature',
         '🗡️ Quest Feature ( Rankup )',
         '💬 Join Our Discord Community'
-    }, nil, '✨Dragon City Script Version 2.9\n💫Script Made By Jkram143 💗\nDragon City ( 25.11.1 )')
+    }, nil, '✨Dragon City tools Script\n Welcome to Dragon city Sripts \n script by Ahko c jkram \n Enjoy  script')
     if menu == 1 then DragonCityHack1() end
     if menu == 2 then DragonCityHack2() end
     if menu == 3 then DragonCityHack10() end
