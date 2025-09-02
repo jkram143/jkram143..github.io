@@ -1,0 +1,13 @@
+gg.setRanges(gg.REGION_C_ALLOC)
+        gg.searchNumber("306;16;0~8Q::57", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.refineNumber("0~8", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1)
+        gg.getResults(1000)
+        gg.editAll("9", gg.TYPE_DWORD)
+        gg.clearResults()
+        gg.setRanges(gg.REGION_C_ALLOC)
+        gg.searchNumber(":expansions", gg.TYPE_BYTE)
+        gg.getResults(10000)
+        gg.editAll("0", gg.TYPE_BYTE)
+        gg.clearResults()
+
+gg.alert("✅ Island unclock al Completed!")
