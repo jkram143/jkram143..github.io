@@ -1,6 +1,6 @@
 gg.setVisible(true)
 fin_busc = 1
-gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
 gg.refineNumber("9288798", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 
 -- Helper Function for Safe Prompt
