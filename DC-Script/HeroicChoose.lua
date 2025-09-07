@@ -232,7 +232,7 @@ end
     end
     if input[10] then
       gg.toast("Returning To Main Menu...")
-		L = gg.makeRequest('https://raw.githubusercontent.com/DunggComet/DC-Script/main/HeroicRace/HeroicChoose.lua').content
+		L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/DC.lua').content
 		if not L then gg.alert('SERVER: Allow Internet Connection...') else
 		pcall(load(L)) end
     end
