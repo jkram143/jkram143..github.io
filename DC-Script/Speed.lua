@@ -56,7 +56,7 @@ function ch1()
         -- If not previously searched
         if #speed_addresses == 0 then
             gg.clearResults()
-            gg.setRanges(gg.REGION_C_ALLOC)
+            gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
             gg.searchNumber("8295", gg.TYPE_DWORD)
             local paneyoi = gg.getResults(50000)
 
