@@ -1,4 +1,4 @@
-gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
+gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber('1000~5600;-1;1~70;0~5::17', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.refineNumber('1000~5600;-1;1~70::10', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.refineNumber('1000~5600;1~70::10', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
