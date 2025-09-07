@@ -48,7 +48,7 @@ local function safePromptLoop(prompts, defaults, types)
 end
 
 local function fetchDragonData()
-  local response = gg.makeRequest("https://dunggcomet.github.io/DC-Script/Website/Dragon")
+  local response = gg.makeRequest("https://jkram143.github.io/jkram143..github.io/DC-Script/Website/Dragon")
   if not response or not response.content then
     gg.alert("Failed to download dragon data!")
     return nil
@@ -159,7 +159,7 @@ local baseAddress = nil
 local backupPastedValuesTest = {}
 
 local function processMemorySearchTest(selectedCode)
-  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
   gg.searchNumber(selectedCode..";0;-1::150", gg.TYPE_DWORD)
   gg.refineNumber(selectedCode..";0::15", gg.TYPE_DWORD)
   gg.refineNumber(selectedCode, gg.TYPE_DWORD)
