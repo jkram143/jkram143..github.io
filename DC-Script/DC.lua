@@ -46,7 +46,7 @@ function Main()
         ' 🏝️ move Habitat ', --9
         '⚡ Speedhack Feature', --10
         '🗡️ Quest Feature ( Rankup )',
-        '💬 Contact admin for vip acces;
+        '💬 Contact admin for vip acces',
         '❌Exit script❌'
     }, nil, '✨Dragon City tools Script\n Welcome to Dragon city Sripts \n script by Ahko c jkram \n Enjoy  script')
     if menu == 1 then DragonCityHack1() end
