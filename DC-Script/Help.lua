@@ -1,11 +1,11 @@
--- Set your Discord invite link here:
-local discord = "https://discord.gg/95EkzpEPma"
+-- Set your Facebook invite link here:
+local Facebook = "https://www.facebook.com/jkram143"
 
--- Copy the Discord link to clipboard ✨
-gg.copyText(discord)
+-- Copy the Facebook link to clipboard ✨
+gg.copyText(facebook)
 
 -- Notify user of successful copy 🎊
-gg.alert("Discord Server Link Copied to Clipboard!✨\n📋 https://discord.gg/95EkzpEPma")
+gg.alert("facebook Link Copied to Clipboard!✨\n📋 https://www.facebook.com/jkram143")
 
 -- Encourage joining the community 🌟
-gg.alert("Join our vibrant Discord community for script support and engaging chats with fellow users! 🌟💬")
+gg.alert("add me on Facebook  community for script support and engaging chats with fellow users! 🌟💬")
