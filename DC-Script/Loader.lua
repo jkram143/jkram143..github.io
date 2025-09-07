@@ -285,9 +285,9 @@ while true do
     os.exit()
   end
 
-  -- handle "join our discord community" option
+  -- handle "add me on Facebook community" option
   if menu == 4 then
-    local discordLink = "https://discord.gg/95EkzpEPma"
+    local discordLink = "https://www.facebook.com/jkram143"
     gg.copyText(discordLink)
     gg.alert(string.format(t.discord_copied, discordLink))
     gg.toast(string.format(t.discord_copied, discordLink))
@@ -320,7 +320,7 @@ while true do
 
   -- handle "start script" option
   local key, sessionId
-  local specificUserId = "3351274690595497851"
+  local specificUserId = "335ggf497851"
   
   -- Check if userId matches the specific ID
   local actualUserId, actualSessionId = findUserId()
