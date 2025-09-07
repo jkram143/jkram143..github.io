@@ -258,7 +258,7 @@ local function revertAllRankUp()
 
   local restoredCount = 0
   for addr, entry in pairs(backupRankUpValues) do
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+    gg.setRanges(gg.REGION_C_ALLOC)
     gg.setValues({{
       address = addr,
       flags   = entry.flags,
@@ -293,7 +293,7 @@ local function featureChangeFinalDragon()
   local toSave = {}
   for _, baseAddr in ipairs(rankUpBaseAddresses) do
     local targetAddr = baseAddr + 0xA0  -- Updated to use 0xA0 offset
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
+    gg.setRanges(gg.REGION_C_ALLOC)
     gg.setValues({{address = targetAddr, flags = gg.TYPE_DWORD, value = newCode}})
 
     gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
@@ -309,7 +309,7 @@ local function featureChangeFinalDragon()
   end
 
   if #toSave > 0 then
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
+    gg.setRanges(gg.REGION_C_ALLOC)
     gg.addListItems(toSave)
     gg.toast(string.format("✅ Updated %d dragon codes successfully!", savedCount), true)
   else
@@ -392,7 +392,7 @@ local function doRankUp()
   -- Determine if any offset+4 > 0
   local hasPositiveValue = false
   for _, v in ipairs(gat) do
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
+    gg.setRanges(gg.REGION_C_ALLOC)
     local offsetValue1 = gg.getValues({{address = v.address + 0x4, flags = gg.TYPE_DWORD}})
     if offsetValue1 and offsetValue1[1] and offsetValue1[1].value > 0 then
       hasPositiveValue = true
@@ -505,7 +505,7 @@ local function doRankUp()
 
     for _, off in ipairs(mod.offsetsToBackup) do
       local addrToBackup = mod.baseAddr + off
-      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+      gg.setRanges(gg.REGION_C_ALLOC)
       local orig = gg.getValues({{address = addrToBackup, flags = gg.TYPE_DWORD}})
       if orig and orig[1] then
         if not backupRankUpValues[addrToBackup] then
@@ -528,14 +528,14 @@ local function doRankUp()
     local baseAddr = mod.baseAddr
 
     for _, inst in ipairs(mod.writeInstructions) do
-      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
+      gg.setRanges(gg.REGION_C_ALLOC)
       gg.setValues({{address = baseAddr + inst[1], flags = gg.TYPE_DWORD, value = inst[2]}})
     end
 
     local valuesToSave = {}
     for _, inst in ipairs(mod.writeInstructions) do
       local addrToSave = baseAddr + inst[1]
-      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+      gg.setRanges(gg.REGION_C_ALLOC)
       local current = gg.getValues({{address = addrToSave, flags = gg.TYPE_DWORD}})
       if current and current[1] then
         table.insert(valuesToSave, {
@@ -548,7 +548,7 @@ local function doRankUp()
     end
 
     if #valuesToSave > 0 then
-      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
+      gg.setRanges(gg.REGION_C_ALLOC)
       gg.addListItems(valuesToSave)
     end
   end
