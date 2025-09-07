@@ -32,7 +32,7 @@ gg.setVisible(false)
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
 local MD5 = gg.makeRequest('').content
-gg.alert(os.date('╟════════════════════╢\nWritten by Jay mark E Liwanan\n  Version Tool: Dragon City\n  Language Script : English\n  Server Script : online\n  Script Update : 25/08/2025 5:44 AM\n  Today : %c\n  facebook : Ahko c Jkram \n  Phone: 09564786134\n  ╟═════════════════════╢'))
+gg.alert(os.date('╟════════════════════╢\nWritten by Jay mark E Liwanan\n  Version Tool: Dragon City\n  Language Script : English\n  Server'))
 function Main()
     menu = gg.choice({
         '⚔️ Battle Arena Feature', --1
@@ -48,7 +48,7 @@ function Main()
         '🗡️ Quest Feature ( Rankup )',
         '💬 Contact admin for vip acces',
         '❌Exit script❌'
-    }, nil, '┍━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┑\n  WELCOME DRAGON CITY SCRIPTS  \n ┕━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┙ \nWritten by Jay mark E Liwanan\n  Version Tool: 25.11.0.1\n  Language Script : English\n  Server Script : online\n  Script Update : 25/08/2025 5:44 AM\n  facebook : Ahko c Jkram \n  Phone: 09564786134\n ┍━━━━━━━━ TOOLS ━━━━━━━━━━┑\n ')
+    }, nil, '┍━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┑\n  WELCOME DRAGON CITY SCRIPTS  \n ┕━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┙ ')
     if menu == 1 then DragonCityHack1() end
     if menu == 2 then DragonCityHack2() end
     if menu == 3 then DragonCityHack3() end
