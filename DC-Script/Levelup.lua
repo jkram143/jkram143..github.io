@@ -91,7 +91,7 @@ local function main()
   end
   
 
-  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
         gg.searchNumber(dragonCode..";99~99999;0;-1::70", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
         gg.refineNumber(dragonCode..";99~999999;0::10", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 
