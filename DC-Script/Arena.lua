@@ -234,7 +234,7 @@ function change_yisus(datos, data)
   end
 
   -- Make request to DC.lua
-  local L = gg.makeRequest('https://raw.githubusercontent.com/DunggComet/DC-Script/main/DC.lua').content
+  local L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/DC.lua').content
   if not L then
     gg.alert('SERVER: Allow Internet Connection...')
   else
