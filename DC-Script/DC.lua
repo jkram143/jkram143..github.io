@@ -61,7 +61,7 @@ function Main()
     if menu == 10 then DragonCityHack9() end
     if menu == 11 then DragonCityHack10() end
     if menu == 12 then DragonCityHack11() end
-    if menu == 12 then DragonCityHack12() end
+    if menu == 13 then DragonCityHack13() end
     if menu == nil then NoSelect() end
 end
 
@@ -143,7 +143,7 @@ L = gg.makeRequest('https://github.com/jkram143/jkram143..github.io/blob/main/DC
 end
 
         end
-function  DragonCityHack12()t()
+function  DragonCityHack13()
    print (os.date ("%c"))
    print('🥺Are you sure about that🥺')
    gg.clearResults()
