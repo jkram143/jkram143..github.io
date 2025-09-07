@@ -16,7 +16,7 @@ else
 
 gg.saveVariable(input, configFile)
 if input[1] then
-gg.setRanges(gg.REGION_C_ALLOC)
+gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
 gg.setVisible(false)
 gg.searchNumber('306;16;0~16Q::70', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.setVisible(false)
@@ -27,7 +27,7 @@ gg.editAll('17', gg.TYPE_DWORD)
 gg.clearResults()
 end
 if input[2] then
-gg.setRanges(gg.REGION_C_ALLOC)
+gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
 gg.setVisible(false)
 gg.searchNumber(':expansions', gg.TYPE_BYTE)
 gg.getResults(10000)
