@@ -32,7 +32,7 @@ gg.setVisible(false)
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
 local MD5 = gg.makeRequest('').content
-gg.alert(os.date('╟════════════════════╢\nWritten by Jay mark E Liwanan\n  Version Tool: Dragon City\n  Language Script : English\n  Server'))
+--gg.alert(os.date('╟════════════════════╢\nWritten by Jay mark E Liwanan\n  Version Tool: Dragon City\n  Language Script : English\n  Server'))
 function Main()
     menu = gg.choice({
         '⚔️ Battle Arena Feature', --1
@@ -112,19 +112,19 @@ function DragonCityHack7()
         pcall(load(L)) end
 end
 
-function DragonCityHack10()
+function DragonCityHack8()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Speed.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
 
-function DragonCityHack8()
+function DragonCityHack9()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Unlock.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
 
-function DragonCityHack9()
+function DragonCityHack10()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Habitat.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
