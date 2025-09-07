@@ -1,15 +1,15 @@
-Detector = gg.getFile():match('[^/]+$')
+--Detector = gg.getFile():match('[^/]+$')
 -------------------------------------------------------------------------
-Name =  'Loader.lua' -- Type Name For Start Script . If Someone Will Rename It , Then Script Won't Run
+--Name =  'Loader.lua' -- Type Name For Start Script . If Someone Will Rename It , Then Script Won't Run
 -------------------------------------------------------------------------
-if Detector == Name then
+--if Detector == Name then
 -------------------------------------------------------------------------
-else 
+--else 
 -------------------------------------------------------------------------
-Error = '⚠ File Rename Is Detected ⚠' -- Type Error Message Here 
-print(Error) 
-return
-end 
+--Error = '⚠ File Rename Is Detected ⚠' -- Type Error Message Here 
+--print(Error) 
+--return
+--end 
 
 gg.clearResults()
 -- script.lua
