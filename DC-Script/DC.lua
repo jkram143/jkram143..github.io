@@ -57,10 +57,10 @@ function Main()
     if menu == 6 then DragonCityHack6() end
     if menu == 7 then DragonCityHack7() end
     if menu == 8 then DragonCityHack8() end
-    if menu == 9 then DragonCityHack12() end
-    if menu == 10 then DragonCityHack9() end
-    if menu == 11 then DragonCityHack10() end
-    if menu == 12 then DragonCityHack11() end
+    if menu == 9 then DragonCityHack9() end
+    if menu == 10 then DragonCityHack10() end
+    if menu == 11 then DragonCityHack11() end
+    if menu == 12 then DragonCityHack12() end
     if menu == 13 then DragonCityHack13() end
     if menu == nil then NoSelect() end
 end
@@ -112,12 +112,6 @@ function DragonCityHack7()
         pcall(load(L)) end
 end
 
-function DragonCityHack10()
-    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Speed.lua').content
-    if not L then gg.alert('SERVER: Allow Internet Connection...') else
-        pcall(load(L)) end
-end
-
 function DragonCityHack8()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Unlock.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
@@ -126,6 +120,12 @@ end
 
 function DragonCityHack9()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Habitat.lua').content
+    if not L then gg.alert('SERVER: Allow Internet Connection...') else
+        pcall(load(L)) end
+end
+
+function DragonCityHack10()
+    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Speed.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
