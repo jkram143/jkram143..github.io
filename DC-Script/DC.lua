@@ -57,10 +57,10 @@ function Main()
     if menu == 6 then DragonCityHack6() end
     if menu == 7 then DragonCityHack7() end
     if menu == 8 then DragonCityHack8() end
-    if menu == 9 then DragonCityHack12() end
-    if menu == 10 then DragonCityHack9() end
-    if menu == 11 then DragonCityHack10() end
-    if menu == 12 then DragonCityHack11() end
+    if menu == 9 then DragonCityHack9() end
+    if menu == 10 then DragonCityHack10() end
+    if menu == 11 then DragonCityHack11() end
+    if menu == 12 then DragonCityHack12() end
     if menu == 13 then DragonCityHack13() end
     if menu == nil then NoSelect() end
 end
