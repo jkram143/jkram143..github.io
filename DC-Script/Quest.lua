@@ -293,10 +293,10 @@ local function featureChangeFinalDragon()
   local toSave = {}
   for _, baseAddr in ipairs(rankUpBaseAddresses) do
     local targetAddr = baseAddr + 0xA0  -- Updated to use 0xA0 offset
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
     gg.setValues({{address = targetAddr, flags = gg.TYPE_DWORD, value = newCode}})
 
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
     local curr = gg.getValues({{address = targetAddr, flags = gg.TYPE_DWORD}})
     if curr and curr[1] then
       table.insert(toSave, {
@@ -309,7 +309,7 @@ local function featureChangeFinalDragon()
   end
 
   if #toSave > 0 then
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
     gg.addListItems(toSave)
     gg.toast(string.format("✅ Updated %d dragon codes successfully!", savedCount), true)
   else
@@ -353,7 +353,7 @@ local function doRankUp()
   end
 
   ---- Phase 1: Search & Collect Modifications ----
-  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
   gg.searchNumber(
     selectedCode .. ";" ..
     IDRong[1]  .. ";" ..
@@ -392,7 +392,7 @@ local function doRankUp()
   -- Determine if any offset+4 > 0
   local hasPositiveValue = false
   for _, v in ipairs(gat) do
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
     local offsetValue1 = gg.getValues({{address = v.address + 0x4, flags = gg.TYPE_DWORD}})
     if offsetValue1 and offsetValue1[1] and offsetValue1[1].value > 0 then
       hasPositiveValue = true
@@ -528,7 +528,7 @@ local function doRankUp()
     local baseAddr = mod.baseAddr
 
     for _, inst in ipairs(mod.writeInstructions) do
-      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
       gg.setValues({{address = baseAddr + inst[1], flags = gg.TYPE_DWORD, value = inst[2]}})
     end
 
@@ -548,7 +548,7 @@ local function doRankUp()
     end
 
     if #valuesToSave > 0 then
-      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+      gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
       gg.addListItems(valuesToSave)
     end
   end
@@ -565,7 +565,7 @@ local function featureRankUpMenu()
        '🐉 Update Final Dragon Code',
        '↩️ Back to Main Menu'},
       nil,
-      'Quest Script Made By Comet💫💗\n🔧 Quest Mod (RankUp) Options:'
+      'Quest Script Made By Jkram143💗\n🔧 Quest Mod (RankUp) Options:'
     )
     if choice == nil then
       gg.toast('⏸️ Resuming Quest Mod menu...', true)
