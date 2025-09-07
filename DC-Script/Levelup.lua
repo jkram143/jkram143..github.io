@@ -98,7 +98,7 @@ local function main()
         local t = gg.getResults(100)
         for i, v in ipairs(t) do
             valor_nivel = gg.getValues({{address=t[1].address+0x0C, flags=4}})[1].value
-            gg.setValues({{address=t[i].address+0x0C, flags=4, value=valor_nivel+1500}})
+            gg.setValues({{address=t[i].address+0x0C, flags=4, value=valor_nivel+5500}})
         end
         gg.clearResults()
         gg.sleep(1000)
