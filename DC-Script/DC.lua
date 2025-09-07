@@ -46,7 +46,8 @@ function Main()
         ' 🏝️ move Habitat ', --9
         '⚡ Speedhack Feature', --10
         '🗡️ Quest Feature ( Rankup )',
-        '💬 Contact admin for vip acces'
+        '💬 Contact admin for vip acces;
+        '❌Exit script❌'
     }, nil, '✨Dragon City tools Script\n Welcome to Dragon city Sripts \n script by Ahko c jkram \n Enjoy  script')
     if menu == 1 then DragonCityHack1() end
     if menu == 2 then DragonCityHack2() end
@@ -60,6 +61,7 @@ function Main()
     if menu == 10 then DragonCityHack9() end
     if menu == 11 then DragonCityHack10() end
     if menu == 12 then DragonCityHack11() end
+    if menu == 12 then DragonCityHack12() end
     if menu == nil then NoSelect() end
 end
 
@@ -139,6 +141,15 @@ L = gg.makeRequest('https://github.com/jkram143/jkram143..github.io/blob/main/DC
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
+
+        end
+function  DragonCityHack12()t()
+   print (os.date ("%c"))
+   print('🥺Are you sure about that🥺')
+   gg.clearResults()
+   os.exit()
+   end
+
 function NoSelect()
     gg.sleep(100)
     gg.toast('Script Made By Jkram143💗')
