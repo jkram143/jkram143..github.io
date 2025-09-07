@@ -12,7 +12,7 @@ gg.getResults(5000)
 gg.editAll('0', gg.TYPE_DWORD)
 gg.clearResults()
 
-gg.setRanges(gg.REGION_C_ALLO)
+gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber('-300~300F;1 077 936 128;1 077 936 128::9', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1 077 936 128', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(5000)
