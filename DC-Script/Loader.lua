@@ -53,7 +53,7 @@ end
 -- id finder function
 --------------------------------------------------
 local function findUserId()
-  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER )
+  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
   gg.searchNumber(':DC-Script', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
   gg.getResults(10000)
   gg.clearResults()
