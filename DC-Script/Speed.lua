@@ -24,7 +24,7 @@ function ch1()
     end
 
     if initChoice == 3 then
-        L = gg.makeRequest('https://raw.githubusercontent.com/DunggComet/DC-Script/main/DC.lua').content
+        L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/DC.lua').content
         if not L then 
             gg.alert('🌐 Server: Please enable internet connection...')
         else
@@ -56,7 +56,7 @@ function ch1()
         -- If not previously searched
         if #speed_addresses == 0 then
             gg.clearResults()
-            gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+            gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
             gg.searchNumber("8295", gg.TYPE_DWORD)
             local paneyoi = gg.getResults(50000)
 
