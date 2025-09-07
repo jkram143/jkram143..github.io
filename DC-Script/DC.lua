@@ -44,13 +44,13 @@ function Main()
         '🏁 Event Race', --7
         ' 🏝️ Unlock islands  🔓 ', --8
         ' 🏝️ move Habitat ', --9
-        '⚡ Speedhack Feature',
+        '⚡ Speedhack Feature', --10
         '🗡️ Quest Feature ( Rankup )',
         '💬 Contact admin for vip acces'
     }, nil, '✨Dragon City tools Script\n Welcome to Dragon city Sripts \n script by Ahko c jkram \n Enjoy  script')
     if menu == 1 then DragonCityHack1() end
     if menu == 2 then DragonCityHack2() end
-    if menu == 3 then DragonCityHack10() end
+    if menu == 3 then DragonCityHack3() end
     if menu == 4 then DragonCityHack4() end
     if menu == 5 then DragonCityHack5() end
     if menu == 6 then DragonCityHack6() end
@@ -58,7 +58,7 @@ function Main()
     if menu == 8 then DragonCityHack8() end
     if menu == 9 then DragonCityHack12() end
     if menu == 10 then DragonCityHack9() end
-    if menu == 11 then DragonCityHack3() end
+    if menu == 11 then DragonCityHack10() end
     if menu == 12 then DragonCityHack11() end
     if menu == nil then NoSelect() end
 end
@@ -111,7 +111,7 @@ function DragonCityHack7()
 end
 
 function DragonCityHack10()
-    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Levelup.lua').content
+    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Speed.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
@@ -123,7 +123,7 @@ function DragonCityHack8()
 end
 
 function DragonCityHack9()
-    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Speed.lua').content
+    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Habitat.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
