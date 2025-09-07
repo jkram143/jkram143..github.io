@@ -142,7 +142,6 @@ L = gg.makeRequest('https://github.com/jkram143/jkram143..github.io/blob/main/DC
         pcall(load(L)) end
 end
 
-        end
 function  DragonCityHack13()
    print (os.date ("%c"))
    print('🥺Are you sure about that🥺')
