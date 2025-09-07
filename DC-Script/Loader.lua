@@ -1,6 +1,6 @@
 Detector = gg.getFile():match('[^/]+$')
 -------------------------------------------------------------------------
-Name =  'dragon-tools-script.lua' -- Type Name For Start Script . If Someone Will Rename It , Then Script Won't Run
+Name =  'Loader.lua' -- Type Name For Start Script . If Someone Will Rename It , Then Script Won't Run
 -------------------------------------------------------------------------
 if Detector == Name then
 -------------------------------------------------------------------------
