@@ -53,11 +53,11 @@ end
 -- id finder function
 --------------------------------------------------
 local function findUserId()
-  gg.setRanges(gg.REGION_C_ALLOC )
+  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER )
   gg.searchNumber(':DC-Script', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
   gg.getResults(10000)
   gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_C_ALLOC)
+  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
   gg.searchNumber(':userId', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1)
 
   local results = gg.getResults(500)
