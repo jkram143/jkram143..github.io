@@ -117,7 +117,7 @@ end
   local selectedCode = searchDragonCode()
   if not selectedCode then return end
 
-  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
+  gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_OTHER)
   gg.searchNumber(selectedCode..";0;-1::150", gg.TYPE_DWORD)
   gg.refineNumber(selectedCode..";0::15", gg.TYPE_DWORD)
   gg.refineNumber(selectedCode, gg.TYPE_DWORD)
