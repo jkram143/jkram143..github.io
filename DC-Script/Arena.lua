@@ -16,7 +16,7 @@ local function safePromptSearch(prompts, defaults, types)
   local input = gg.prompt(prompts, defaults, types)
   while not input do
     gg.toast("Script paused. Tap GG icon to resume.", true)
-    waitForResume()
+    main()
     while gg.isVisible() do
       gg.sleep(100)
     end
