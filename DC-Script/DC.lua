@@ -28,33 +28,11 @@ else
 end
 
 gg.clearResults()
--- script.lua
--- this file contains the main script with login, language selection, and version-specific features.
 gg.setVisible(false)
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
-if true then
-  -- Keep original function
-  local originalSearch = gg.searchNumber
-
-  -- Wrap search function
-  local protectedSearch = function(...)
-    gg.setVisible(false)
-    local result = originalSearch(...)
-
-    if gg.isVisible() then
-      gg.setVisible(false)
-      gg.sleep(1000)
-    end
-
-    return result
-  end
-
-  -- Replace the searchNumber function with a safe version.
-  gg.searchNumber = protectedSearch
-end
 local MD5 = gg.makeRequest('').content
-gg.alert(os.date('╟════════════════════╢\nWritten by Jay mark E Liwanan\n  Version Tool: Dragon City\n  Language Script : English\n  Server Script : online\n  Script Update : 25/08/2025 5:44 AM\n  Today : %c\n  facebook : Ahko c Jkram \n  Phone: 09564786134\n  ╟═════════════════════╢'))
+--gg.alert(os.date('╟════════════════════╢\nWritten by Jay mark E Liwanan\n  Version Tool: Dragon City\n  Language Script : English\n  Server'))
 function Main()
     menu = gg.choice({
         '⚔️ Battle Arena Feature', --1
@@ -70,7 +48,7 @@ function Main()
         '🗡️ Quest Feature ( Rankup )',
         '💬 Contact admin for vip acces',
         '❌Exit script❌'
-    }, nil, '┍━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┑\n  WELCOME DRAGON CITY SCRIPTS  \n ┕━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┙ \nWritten by Jay mark E Liwanan\n  Version Tool: 25.11.0.1\n  Language Script : English\n  Server Script : online\n  Script Update : 25/08/2025 5:44 AM\n  facebook : Ahko c Jkram \n  Phone: 09564786134\n ┍━━━━━━━━ TOOLS ━━━━━━━━━━┑\n ')
+    }, nil, '┍━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┑\n  WELCOME DRAGON CITY SCRIPTS  \n ┕━━━━━━━━ ⋆⋅☆⋅⋆ ━━━━━━━━━━┙ ')
     if menu == 1 then DragonCityHack1() end
     if menu == 2 then DragonCityHack2() end
     if menu == 3 then DragonCityHack3() end
@@ -79,10 +57,10 @@ function Main()
     if menu == 6 then DragonCityHack6() end
     if menu == 7 then DragonCityHack7() end
     if menu == 8 then DragonCityHack8() end
-    if menu == 9 then DragonCityHack12() end
-    if menu == 10 then DragonCityHack9() end
-    if menu == 11 then DragonCityHack10() end
-    if menu == 12 then DragonCityHack11() end
+    if menu == 9 then DragonCityHack9() end
+    if menu == 10 then DragonCityHack10() end
+    if menu == 11 then DragonCityHack11() end
+    if menu == 12 then DragonCityHack12() end
     if menu == 13 then DragonCityHack13() end
     if menu == nil then NoSelect() end
 end
@@ -134,19 +112,19 @@ function DragonCityHack7()
         pcall(load(L)) end
 end
 
-function DragonCityHack10()
+function DragonCityHack8()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Speed.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
 
-function DragonCityHack8()
+function DragonCityHack9()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Unlock.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
 
-function DragonCityHack9()
+function DragonCityHack10()
     L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Habitat.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
@@ -164,23 +142,27 @@ L = gg.makeRequest('https://github.com/jkram143/jkram143..github.io/blob/main/DC
         pcall(load(L)) end
 end
 
-function  DragonCityHack13()
-   print (os.date ("%c"))
-   print('🥺Are you sure about that🥺')
-   gg.clearResults()
-   os.exit()
-   end
-   
+function DragonCityHack13()
+print(os.date([[༺ថ្ងៃ 26/ខែ11/ឆ្នាំ 2020
+╭───༺֍⚞⊷⊶᳀⊷⊶⚞֍༻───╮
+ ➣sᴄʀɪᴘᴛ ʙʏ ʀᴇᴀᴄʜ ɢᴀᴍɪɴɢ ɪᴛ♦️ 
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣ʀᴜʟᴇs ᴠ ᴘʟᴀʏ sᴛᴏʀᴇ🎮
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣sᴄʀɪᴘᴛ : ɴᴏ ʀᴏᴏᴛ&ʀᴏᴏᴛ 📳
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣sᴄʀɪᴘᴛ ɴᴏ ᴇʀᴏʀʀ&ɴᴏ ʙᴀɴɴᴇᴛ🛠️
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣ɢɢ ᴍᴏᴅ ᴠ 95.0 ɴᴏ ᴇʀᴏʀʀ ⚙️
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣sᴄʀɪᴘᴛ ᴀɪᴍʟᴏᴄᴋ ᴠɪᴘ 💰💲 
+╰───༺֍⚞⊷⊶᳀⊷⊶⚞֍༻───╯]]))
+os.exit()
+  main()
+end
+
 function NoSelect()
     gg.sleep(100)
     gg.toast('Script Made By Jkram143💗')
 end
-
 -------------------------------------------------------------------------
-        gg.setVisible(true)
-        while true do
-        if gg.isVisible() then
-        gg.setVisible(false)
-        Main()
-    end
-end------------------------------------------------------------
