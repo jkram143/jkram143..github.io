@@ -63,7 +63,7 @@ local function searchDragonCode()
     globalDragonData = fetchDragonData()
     if not globalDragonData then return nil end
   end
-  local input = safePromptSearch({"🐉 Enter 1st Dragon name:"}, {""}, {"text"})
+  local input = safePromptSearch({"╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  Enter 1st Dragon name: ⚔️ \n╚════════ ≪ •❈• ≫ ════════╝"}, {""}, {"text"})
   if input == nil then return nil end
   local searchTerm = input[1]:lower()
   local matches, codes = {}, {}
