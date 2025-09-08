@@ -165,13 +165,4 @@ function NoSelect()
     gg.sleep(100)
     gg.toast('Script Made By Jkram143💗')
 end
-
--------------------------------------------------------------------------
-        gg.setVisible(true)
-        while true do
-        if gg.isVisible() then
-        gg.setVisible(false)
-        Main()
-    end
-end
 -------------------------------------------------------------------------
