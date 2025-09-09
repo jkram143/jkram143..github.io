@@ -1,4 +1,19 @@
--- Combined Dragon City Ultimate Mod with Test Skill Integration & Revert Paste Feature
+L={'◼', '◻', '◻', '◻', '◻', '◻'} -- LOADING TABLE
+LD = 0
+for i=0, 6, 1 do
+	if gg.isVisible(true) and i ~= 6 then
+		gg.setVisible(false)
+	end
+	gg.sleep(1000)
+	gg.toast('Loading: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/100%')
+	LD = LD + 20
+	table.remove(L)
+	table.insert(L, 2, "◼")
+	if i == 6 then
+		gg.sleep(2000)
+	end
+end
+
 gg.setVisible(false)
 gg.clearResults()
 
@@ -82,7 +97,7 @@ local function searchDragonCode()
     if not globalDragonData then return nil end
   end
 
-  local input = safePromptSearch({"Enter dragon name:"}, {""}, {"text"})
+  local input = safePromptSearch({"╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  Enter Dragon name: ⚔️ \n╚════════ ≪ •❈• ≫ ════════╝"}, {""}, {"text"})
   if input == nil then
     return nil  -- Exit immediately if cancelled.
   end
