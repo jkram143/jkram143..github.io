@@ -1,15 +1,15 @@
---Detector = gg.getFile():match('[^/]+$')
+Detector = gg.getFile():match('[^/]+$')
 -------------------------------------------------------------------------
---Name =  'Loader.lua' -- Type Name For Start Script . If Someone Will Rename It , Then Script Won't Run
+Name =  'dragon-tools-script.lua' -- Type Name For Start Script . If Someone Will Rename It , Then Script Won't Run
 -------------------------------------------------------------------------
---if Detector == Name then
+if Detector == Name then
 -------------------------------------------------------------------------
---else 
+else 
 -------------------------------------------------------------------------
---Error = '⚠ File Rename Is Detected ⚠' -- Type Error Message Here 
---print(Error) 
---return
---end 
+Error = '⚠ File Rename Is Detected ⚠' -- Type Error Message Here 
+print(Error) 
+return
+end 
 
 gg.clearResults()
 -- script.lua
@@ -158,24 +158,41 @@ elseif type(login) ~= "table" then
   return
 end
 
+gg.alert(os.date([[༺ script update: Sep/08/2025 ༻
+╭───༺֍⚞⊷⊶᳀⊷⊶⚞֍༻───╮
+ ➣sᴄʀɪᴘᴛ ʙʏ Jkram143♦️ 
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣Dragon city scripts tools🎮
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣sᴄʀɪᴘᴛ : ɴᴏ ʀᴏᴏᴛ&ʀᴏᴏᴛ 📳
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣sᴄʀɪᴘᴛ ɴᴏ ᴇʀᴏʀʀ&ɴᴏ ʙᴀɴɴᴇᴛ🛠️
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣ɢɢ ᴍᴏᴅ ᴠ v1.1 ɴᴏ ᴇʀᴏʀʀ ⚙️
+ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+ ➣sᴄʀɪᴘᴛ Unlock for ᴠɪᴘ 💰💲 
+╰───༺֍⚞⊷⊶᳀⊷⊶⚞֍༻───╯]]))
+
+--╔════════ ≪  🔑 ≫ ════════╗\n   ➡️  Enter password \n╚════════ ≪  🔑 ≫ ════════╝",
 --------------------------------------------------
 -- language selection and translations
+--┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Automatically Enter Password \n┗━━━━━━━༻  🤖  ༺━━━━━━━┛",
 --------------------------------------------------
 local lang = "English" -- default language
 local translations = {
   English = {
-    select_option = "Select an option:",
-    start_script = "▶️ Start Script",
-    find_userid = "🔍 Find UserID",
-    reset_userid_search = "🔄 Reset Finding UserID",
-    join_discord = "💬 add me on facebook for VIP",
-    exit_script = "✖️ Exit Script",
-    select_password_method = "Select password entry method:",
-    manual_password = "🔑 Manually Enter Password",
-    auto_password = "🤖 Automatically Enter Password",
-    enter_password = "Enter password:",
+    select_option = "┏━━━━━━━━━༻❁༺━━━━━━━━━━┓\n  ➡️ Dragon city scripts gg\n  ➡️ ғᴀᴄᴇʙᴏᴏᴋ Account: Ahco c Jkram143\n  ➡️ link: www.facebook.com/jkram143 \n  ➡️ For VIP contact Admin \n┗━━━━━━━━━༻❁༺━━━━━━━━━━┛ ",
+    start_script = "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Start Script \n┗━━━━━━━༻  ⏏️  ༺━━━━━━━┛",
+   find_userid = "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Find UserID \n┗━━━━━━━༻  🆔  ༺━━━━━━━┛",
+    reset_userid_search = "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Reset Finding UserID \n┗━━━━━━━༻  🔄  ༺━━━━━━━┛",
+    join_discord = "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Facebook Account \n┗━━━━━━━༻  ⓕ  ༺━━━━━━━┛",
+    exit_script = "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Exit Script \n┗━━━━━━━༻  ✖️  ༺━━━━━━━┛",
+    select_password_method = "┏━━━━━━━━━༻❁༺━━━━━━━━━━┓\n  ➡️ Dragon city scripts gg\n  ➡️ ғᴀᴄᴇʙᴏᴏᴋ Account: Ahco c Jkram143\n  ➡️ link: www.facebook.com/jkram143 \n  ➡️ For VIP contact Admin \n┗━━━━━━━━━༻❁༺━━━━━━━━━━┛ ",
+    manual_password = "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Manually Enter Password \n┗━━━━━━━༻  ✖️  ༺━━━━━━━┛",
+    auto_password = "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  Automatically Enter Password \n┗━━━━━━━༻  🤖  ༺━━━━━━━┛",
+    enter_password = "┏━━━━━━━━━༻❁༺━━━━━━━━━━┓\n  ⤵️ enter password \n┗━━━━━━━━━༻❁༺━━━━━━━━━━┛ ",
     no_userid = "No userid found!",
-    info_found = "Please send to the author if you wanted to buy!\n\n🆔 userID: %s\n🔑 sessionID: %s",
+    info_found = "Please send to the author if you wanted to buy!\n\n🆔 userID: %s\n🔑  sessionID: %s",
     userid_copied = "📋 UserID copied to clipboard: %s",
     no_userid_session = "No userid and Sessionid found!",
     invalid_password = "⚠️ Invalid password",
@@ -229,8 +246,8 @@ local translations = {
 
 -- language selection menu
 local langMenu = safeChoiceSearch({
-  "🇬🇧 English"
-}, nil, "Select Language")
+  "┏━━━━━━━༻❁༺━━━━━━━━━┓\n   ➡️  English \n┗━━━━━━━༻  🇬🇧  ༺━━━━━━━┛",
+}, nil, "┏━━━━━━━━━༻❁༺━━━━━━━━━━┓\n  ➡️ Dragon city scripts gg\n  ➡️ ғᴀᴄᴇʙᴏᴏᴋ Account: Ahco c Jkram143\n  ➡️ link: www.facebook.com/jkram143 \n  ➡️ For VIP contact Admin \n┗━━━━━━━━━༻❁༺━━━━━━━━━━┛")
 if not langMenu then
   while not gg.isVisible() do
     gg.sleep(100)
