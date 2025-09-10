@@ -78,7 +78,7 @@ local function searchDragonCode()
     if not globalDragonData then return nil end
   end
 
-  local input = safePromptSearch({"🔍 Enter dragon name to search:"}, {""}, {"text"})
+  local input = safePromptSearch({"╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Enter dragon name to search  🔍 \n╚════════ ≪ •❈• ≫ ════════╝"}, {""}, {"text"})
   if input == nil then
     return nil
   end
@@ -115,7 +115,7 @@ local function searchDragonCodeLoop()
     if not globalDragonData then return nil end
   end
 
-  local input = safePromptLoop({"🔍 Enter 1st dragon name:"}, {""}, {"text"})
+  local input = safePromptLoop({"╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Enter 1st dragon name  🔍 \n╚════════ ≪ •❈• ≫ ════════╝"}, {""}, {"text"})
   local searchTerm = input[1]:lower()
   local matches, codes = {}, {}
   for _, dragon in ipairs(globalDragonData) do
@@ -132,7 +132,7 @@ local function searchDragonCodeLoop()
 
   local choice = nil
   repeat
-    choice = gg.choice(matches, nil, "Select 1st Dragon:")
+    choice = gg.choice(matches, nil, "╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  Select 1st Dragon ⚔️ \n╚════════ ≪ •❈• ≫ ════════╝")
     if choice == nil then
       gg.toast("⏸️ Selection paused. Tap GG icon to continue!", true)
       waitForResume()
@@ -148,7 +148,7 @@ local function searchDragonCodeLooop()
     if not globalDragonData then return nil end
   end
 
-  local input = safePromptLoop({"🔍 Enter 2nd dragon name:"}, {""}, {"text"})
+  local input = safePromptLoop({"╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Enter 2nd dragon name  🔍 \n╚════════ ≪ •❈• ≫ ════════╝"}, {""}, {"text"})
   local searchTerm = input[1]:lower()
 
   local matches, codes = {}, {}
@@ -166,7 +166,7 @@ local function searchDragonCodeLooop()
 
   local choice
   repeat
-    choice = gg.choice(matches, nil, "Select 2nd Dragon:")
+    choice = gg.choice(matches, nil, "╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  Select 2rd Dragon ⚔️ \n╚════════ ≪ •❈• ≫ ════════╝:")
     if choice == nil then
       gg.toast("⏸️ Selection paused. Tap GG icon to continue!", true)
       waitForResume()
@@ -182,7 +182,7 @@ local function searchDragonCodeLoooop()
     if not globalDragonData then return nil end
   end
 
-  local input = safePromptLoop({"🔍 Enter 3rd dragon name:"}, {""}, {"text"})
+  local input = safePromptLoop({"╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Enter 3nd dragon name  🔍 \n╚════════ ≪ •❈• ≫ ════════╝"}, {""}, {"text"})
   local searchTerm = input[1]:lower()
 
   local matches, codes = {}, {}
@@ -200,7 +200,7 @@ local function searchDragonCodeLoooop()
 
   local choice
   repeat
-    choice = gg.choice(matches, nil, "Select 3rd Dragon:")
+    choice = gg.choice(matches, nil, "╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  Select 3rd Dragon ⚔️ \n╚════════ ≪ •❈• ≫ ════════╝")
     if choice == nil then
       gg.toast("⏸️ Selection paused. Tap GG icon to continue!", true)
       waitForResume()
@@ -216,7 +216,7 @@ local function searchDragonCodeLooooop()
     if not globalDragonData then return nil end
   end
 
-  local input = safePromptSearch({"🔍 Enter final dragon name:"}, {""}, {"text"})
+  local input = safePromptSearch({"╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  Enter Dragon name: ⚔️ \n╚════════ ≪ •❈• ≫ ════════╝"}, {""}, {"text"})
   if input == nil then
     return nil
   end
@@ -328,14 +328,16 @@ local function doRankUp()
   if not extraCode then return end
   local bonusCode = searchDragonCodeLoooop()
   if not bonusCode then return end
+  
+  -- ╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  1st Dragon Level', '🔎 1st Dragon Grade:gg🔎 \n╚════════ ≪ •❈• ≫ ════════╝
 
-  local IDRong  = safePromptLoop({'🔎 1st Dragon Level', '🌟 1st Dragon Grade'}, {nil, nil}, {'number', 'number'})
-  local IDRong2 = safePromptLoop({'🔎 2nd Dragon Level', '🌟 2nd Dragon Grade'}, {nil, nil}, {'number', 'number'})
-  local IDRong3 = safePromptLoop({'🔎 3rd Dragon Level', '🌟 3rd Dragon Grade'}, {nil, nil}, {'number', 'number'})
+  local IDRong  = safePromptLoop({'╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  1st Dragon Level 🔎 \n  ⤵️  1st Dragon Grade 🔎 \n╚════════ ≪ •❈• ≫ ════════╝'}, {nil, nil}, {'number', 'number'})
+  local IDRong2 = safePromptLoop({'╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  2st Dragon Level 🔎 \n  ⤵️  2st Dragon Grade 🔎 \n╚════════ ≪ •❈• ≫ ════════╝'}, {nil, nil}, {'number', 'number'})
+  local IDRong3 = safePromptLoop({'╔════════ ≪ •❈• ≫ ════════╗\n  ⤵️  3st Dragon Level  🔎 \n  ⤵️  3st Dragon Grade 🔎 \n╚════════ ≪ •❈• ≫ ════════╝'}, {nil, nil}, {'number', 'number'})
 
   local finalDragonCode = nil
   while finalDragonCode == nil do
-    gg.toast("🐲 Select final dragon to proceed.", true)
+    gg.toast(" Select final dragon to proceed", true)
     finalDragonCode = searchDragonCodeLooooop()
     if not finalDragonCode then
       gg.toast("⏸️ Script paused. Tap GG icon to continue!", true)
@@ -560,12 +562,12 @@ end
 local function featureRankUpMenu()
   while true do
     local choice = gg.choice(
-      {'🚀 Run Quest Mod (RankUp)',
-       '🔄 Revert All Quest Mod Changes',
-       '🐉 Update Final Dragon Code',
-       '↩️ Back to Main Menu'},
+      {'╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Run Quest Mod (RankUp)  🚀 \n╚════════ ≪ •❈• ≫ ════════╝',
+       '╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Revert Quest Mod Changes  🔄 \n╚════════ ≪ •❈• ≫ ════════╝',
+       '╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Update Final Dragon Code  🐉 \n╚════════ ≪ •❈• ≫ ════════╝',
+       '╔════════ ≪ •❈• ≫ ════════╗\n  ➡️  Back to Main Menu  ↩️ \n╚════════ ≪ •❈• ≫ ════════╝'},
       nil,
-      'Quest Script Made By Jkram143💗\n🔧 Quest Mod (RankUp) Options:'
+      '┏━━━━━━━━━༻❁༺━━━━━━━━━━┓\n  ➡️ Dragon city scripts gg\n  ➡️ ғᴀᴄᴇʙᴏᴏᴋ Account: Ahco c Jkram143\n  ➡️ link: www.facebook.com/jkram143 \n  ➡️ Quest Mod (RankUp) Options: \n┗━━━━━━━━━༻❁༺━━━━━━━━━━┛'
     )
     if choice == nil then
       gg.toast('⏸️ Resuming Quest Mod menu...', true)
