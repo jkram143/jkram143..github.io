@@ -1,3 +1,20 @@
+
+L={'◼', '◻', '◻', '◻', '◻', '◻'} -- LOADING TABLE
+LD = 0
+for i=0, 6, 1 do
+	if gg.isVisible(true) and i ~= 6 then
+		gg.setVisible(false)
+	end
+	gg.sleep(1000)
+	gg.toast('Loading move habitat: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/100%')
+	LD = LD + 20
+	table.remove(L)
+	table.insert(L, 2, "◼")
+	if i == 6 then
+		gg.sleep(2000)
+	end
+end
+
 gg.setRanges(gg.REGION_C_ALLOC)
 gg.searchNumber('-300~300F;1 065 353 216;1 065 353 216;2~1000;10~10000::17', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.refineNumber('1 065 353 216', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
