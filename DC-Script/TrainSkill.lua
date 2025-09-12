@@ -174,9 +174,9 @@ local backupPastedValuesTest = {}
 
 local function processMemorySearchTest(selectedCode)
   gg.setRanges(gg.REGION_C_ALLOC)
-  gg.searchNumber(selectedCode..";0;-1::150", gg.TYPE_DWORD)
-  gg.refineNumber(selectedCode..";0::15", gg.TYPE_DWORD)
-  gg.refineNumber(selectedCode, gg.TYPE_DWORD)
+  gg.searchNumber(dragonCode..";0;-1::150", gg.TYPE_DWORD)
+  gg.refineNumber(dragonCode..";0::15", gg.TYPE_DWORD)
+  gg.refineNumber(dragonCode, gg.TYPE_DWORD)
   local results = gg.getResults(100)
   validResultsTest = {}
   for _, v in ipairs(results) do
