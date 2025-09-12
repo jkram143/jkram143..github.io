@@ -6,7 +6,7 @@ for i=0, 6, 1 do
 		gg.setVisible(false)
 	end
 	gg.sleep(1000)
-	gg.toast('Loading: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/100%')
+	gg.toast('Loading script unlock island: '..L[1]..L[2]..L[3]..L[4]..L[5]..L[6]..' '..LD..'/100%')
 	LD = LD + 20
 	table.remove(L)
 	table.insert(L, 2, "◼")
