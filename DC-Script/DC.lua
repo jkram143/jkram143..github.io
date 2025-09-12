@@ -150,13 +150,13 @@ function DragonCityHack8()
 end
 
 function DragonCityHack9()
-    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Unlock.lua').content
+    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Habitat.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
 
 function DragonCityHack10()
-    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Habitat.lua').content
+    L = gg.makeRequest('https://raw.githubusercontent.com/jkram143/jkram143..github.io/refs/heads/main/DC-Script/Speed.lua').content
     if not L then gg.alert('SERVER: Allow Internet Connection...') else
         pcall(load(L)) end
 end
